@@ -23,7 +23,7 @@ gulp.task('serve', function() {
         open: false,
         reloadDelay: 1000,
         server: {
-            baseDir: "./src"
+            baseDir: "./public"
         }
     });
 });
