@@ -1,0 +1,17 @@
+{
+  "name": "setup-gulp-vuejs",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "repository": "https://github.com/93lucasp/setup-gulp-vuejs.git",
+  "author": "Luca Spezzano <spezzanoluca@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.19.0",
+    "browserify": "^14.5.0",
+    "fs": "^0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-sequence": "^0.4.6",
+    "vue": "^2.5.13",
+    "vueify": "^9.4.1"
+  }
+}
