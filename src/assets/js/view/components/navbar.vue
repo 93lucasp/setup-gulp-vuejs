@@ -5,9 +5,10 @@
             <div class="ml-auto">
                 
                 <ul>
-                    <li v-for="item in items">
+                    <vue-items :items="items" ></vue-items>
+                    <!-- <li v-for="item in items">
                         <a v-bind:href="item"> {{ item }} </a>
-                    </li>
+                    </li> -->
                 </ul>
                 <ul class="access">
                     <li>

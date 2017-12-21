@@ -1,9 +1,10 @@
 <template>
-    <div class="navBar wow slideInLeft">
-        navbar
-        {{userName}}
-      
+    <div>
+        <li v-for="item in items">
+            <a v-bind:href="item + '.html'"> {{ item }} </a>
+        </li>
     </div>
+       
 </template>
 
 <script>
@@ -12,7 +13,7 @@
 
     module.exports =  {
         props: {
-            navBarItems: Array
+            items: Array,
             // userName: {
             //     type: String,
             //     required: true,
@@ -23,8 +24,9 @@
         },
         data: function() {
             return {
-                links: ['link1','link2', 'link3', 'link4'],
-                access: ['login','signup']
+                // links: ['link1','link2', 'link3', 'link4'],
+                // access: ['login','signup'],
+                
             }
         },
         methods: {
