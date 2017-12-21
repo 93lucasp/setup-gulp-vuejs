@@ -1,0 +1,7 @@
+@mixin breakLine($num) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}

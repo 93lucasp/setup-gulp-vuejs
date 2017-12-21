@@ -1,7 +1,8 @@
 <template>
-    <div class="navbar">
+    <div class="navBar">
         navbar
         {{userName}}
+      
     </div>
 </template>
 
@@ -26,19 +27,13 @@
         //         age: 24
         //     }
         // },
-        // methods: {
-        //     changeName() {
-        //         this.name="Alex";
+        methods: {
+            changeName() {
+                this.userName="Alexnavbar";
                 
-        //     },
-        //     resetName() {
-        //         this.name = "Luca";
-        //     },
-        //     changeAge() {
-        //         this.age = 30;
-        //     }
+            },
             
-        // },
+        },
         // components: {
         //     appUserDetail: UserDetail,
         //     appUserEdit: UserEdit
@@ -47,7 +42,5 @@
 </script>
 
 <style scoped>
-    div {
-        background-color: lightblue;
-    }
+   
 </style>

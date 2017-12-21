@@ -1,9 +1,9 @@
 <template>
     <div class="component">
        <vue-navbar :userName="name"></vue-navbar>
-   
-        <!-- <button @click="changeName()">change my name</button>
-        {{name}} -->
+    {{name}}
+        <button @click="changeName()">change my name</button>
+    
         <hr>
         <div class="container">
             <div class="row">
@@ -23,17 +23,21 @@
                 </div>
             </div>
         </div>
+        <vue-footer></vue-footer>
     </div>
 </template>
 
 <script>
-var navbar = require('../components/navbar.vue')
+var navbar = require('../components/navbar.vue'),
+footer = require('../components/footer.vue');
+
     // import UserDetail from './UserDetail.vue';
     // import navbar from './components/navbar.vue';
 
      module.exports =  {
          components: {
-            vueNavbar: navbar
+            vueNavbar: navbar,
+            vueFooter: footer
         },
         data: function() {
             return {
@@ -41,19 +45,19 @@ var navbar = require('../components/navbar.vue')
                 age: 24
             }
         },
-        // methods: {
-        //     changeName() {
-        //         this.name="Alex";
+        methods: {
+            changeName() {
+                this.name="Alex";
                 
-        //     },
-        //     resetName() {
-        //         this.name = "Luca";
-        //     },
-        //     changeAge() {
-        //         this.age = 30;
-        //     }
+            }
+            // resetName() {
+            //     this.name = "Luca";
+            // },
+            // changeAge() {
+            //     this.age = 30;
+            // }
             
-        // },
+        },
         // components: {
         //     appUserDetail: UserDetail,
         //     appUserEdit: UserEdit
@@ -62,7 +66,5 @@ var navbar = require('../components/navbar.vue')
 </script>
 
 <style scoped>
-    div {
-        background-color: lightblue;
-    }
+   
 </style>
