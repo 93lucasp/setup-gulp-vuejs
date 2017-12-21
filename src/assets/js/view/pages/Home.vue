@@ -1,6 +1,6 @@
 <template>
     <div class="component">
-       <vue-navbar :userName="name"></vue-navbar>
+       <vue-navbar :userName="name" :items="items.navBar" :logo="logos.main"><vue-footer></vue-footer></vue-navbar>
     {{name}}
         <button @click="changeName()">change my name</button>
     
@@ -23,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <vue-footer></vue-footer>
+        
     </div>
 </template>
 
@@ -42,7 +42,15 @@ footer = require('../components/footer.vue');
         data: function() {
             return {
                 name: "Luca",
-                age: 24
+                age: 24,
+                items: {
+                    navBar: ['link1','link2','link3','link4'],
+                    footer: ['link1','link2','link3','link4'],
+                },
+                logos: {
+                    main: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bass_logo.svg/170px-Bass_logo.svg.png',
+
+                }
             }
         },
         methods: {

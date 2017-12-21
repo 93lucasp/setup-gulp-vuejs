@@ -1,3 +1,20 @@
-.navBar {
+.vue-navBar {
+    height: 4em;
     background: #090909;
+    .logo {
+        width: 40px;
+    }
+    .access {
+        margin-left: 30px;
+    }
+    ul {
+        display: inline-block;
+    }
+    li {
+        display: inline-block;
+        margin: 0 8px;
+        a {
+            color: #fff;
+        }
+    }
 }
