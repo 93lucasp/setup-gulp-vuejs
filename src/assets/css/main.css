@@ -5540,7 +5540,19 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
-.navBar {
+.vue-navBar {
+  height: 4em;
   background: #090909; }
+.vue-navBar .logo {
+    width: 40px; }
+.vue-navBar .access {
+    margin-left: 30px; }
+.vue-navBar ul {
+    display: inline-block; }
+.vue-navBar li {
+    display: inline-block;
+    margin: 0 8px; }
+.vue-navBar li a {
+      color: #fff; }
 
 /*# sourceMappingURL=main.css.map */
