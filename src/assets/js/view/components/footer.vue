@@ -18,5 +18,3 @@
         color: #fff;
     }
 </style>
-
-

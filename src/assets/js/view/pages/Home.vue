@@ -5,6 +5,7 @@
         <div class="container mt-4">
             <div class="row">
                 ciaoo questa è la home
+
             </div>
         </div>
         <vue-footer></vue-footer>
@@ -34,5 +35,4 @@ module.exports =  {
 </script>
 
 <style scoped>
-
 </style>

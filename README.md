@@ -1,1 +1,5 @@
-# setup-gulp-vuejs
+# Testing gulp + vuejs
+
+``` yarn install ```
+
+``` gulp ```

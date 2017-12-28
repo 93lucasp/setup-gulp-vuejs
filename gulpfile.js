@@ -65,7 +65,7 @@ gulp.task('js-min', function() {
         .pipe(rename(function(path) {
             path.extname = ".min.js";
         }))
-        .pipe(gulp.dest('./public/assets/js'));
+        .pipe(gulp.dest('./public/assets/js/'));
 });
 
 gulp.task('images', function() {
@@ -90,6 +90,7 @@ gulp.watch("./src/**/*.html", ['html']).on('change', browserSync.reload);
 gulp.watch("./src/assets/css/**/*.scss", ['sass']);
 gulp.watch("./src/assets/css/**/*.css", ['css-min']).on('change', browserSync.reload);
 gulp.watch("./src/assets/js/**/*.js", ['js-min']).on('change', browserSync.reload);
+gulp.watch("./src/assets/js/**/*.vue", ['vue']).on('change', browserSync.reload);
 
 // open server on port 3000
 gulp.task('serve', function() {
