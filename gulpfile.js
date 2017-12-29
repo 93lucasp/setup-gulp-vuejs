@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     sourcemaps = require("gulp-sourcemaps"),
     postcss = require('gulp-postcss'),
+    inject = require('gulp-inject'),
     jsVendors = require('./package.json').jsDependecies;
 
 
@@ -84,7 +85,6 @@ gulp.task('html', function() {
     return gulp.src('./src/*.html')
         .pipe(gulp.dest('./public'));
 });
-
 
 gulp.watch("./src/**/*.html", ['html']).on('change', browserSync.reload);
 gulp.watch("./src/assets/css/**/*.scss", ['sass']);

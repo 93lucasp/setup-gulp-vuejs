@@ -14,16 +14,20 @@ Vue.component('vue-navbar', NavBar);
 Vue.component('vue-home', Home);
 
 
-new Vue({
-    el: '#app',
-    render: function(createElement) {
-        return createElement(Home)
+$(document).ready(function() {
+    if ($('body').hasClass('home')) {
+        new Vue({
+            el: '#home',
+            render: function(createElement) {
+                return createElement(Home)
+            }
+        })
+    } else if ($('body').hasClass('projects')) {
+        new Vue({
+            el: '#projects',
+            render: function(createElement) {
+                return createElement(Projects)
+            }
+        })
     }
-})
-
-new Vue({
-    el: '#projects',
-    render: function(createElement) {
-        return createElement(Projects)
-    }
-})
+});
