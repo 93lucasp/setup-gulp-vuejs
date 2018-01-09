@@ -1,7 +1,7 @@
 <template>
      <div class="component">
        <vue-navbar :userName="name" :items="items.navBar" :logo="logos.main"></vue-navbar>
-
+       
         <div class="container mt-4">
             <div class="row">
                 <div class="col-lg-4" v-for="project in listProjects">
@@ -25,6 +25,7 @@ module.exports =  {
            items: items,
            logos: logos,
            listProjects: listProjects,
+          
            
        }
    },
