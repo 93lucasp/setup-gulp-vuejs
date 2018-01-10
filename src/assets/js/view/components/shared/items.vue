@@ -1,23 +1,12 @@
 <template>
-    <div>
-        <li v-for="item in items">
-            <a v-bind:href="item + '.html'"> {{ item }} </a>
-        </li>
-    </div>
+    
+     <a v-bind:href="item + '.html'" > {{ item }} </a>
+       <!-- @click.prevent="changePage(item)" -->
 </template>
 
 <script>
     module.exports =  {
-        props: {
-            items: Array,
-            // userName: {
-            //     type: String,
-            //     required: true,
-            //     // default: "ALEX"
-            // },
-            // userAge: Number,
-            // resetFn: Function
-        },
+        props: ['item'],
         data: function() {
             return {
             }

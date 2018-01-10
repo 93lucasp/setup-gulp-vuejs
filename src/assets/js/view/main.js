@@ -16,14 +16,18 @@ Vue.component('vue-navbar', NavBar);
 // HOME PAGE
 
 // page to pass
-var Home = require('./pages/Home.vue')
 
 
+
+// page to pass
+var App = require('./App.vue')
+
+Vue.component('vue-app', App);
 // PROJECTS PAGE
 
 // page to pass
-var Projects = require('./pages/Projects.vue')
-    // imorting components
+
+// imorting components
 var Project = require('./components/projects/project.vue')
     // create components
 Vue.component('vue-project', Project);
@@ -32,8 +36,8 @@ Vue.component('vue-project', Project);
 // QUOTE PAGE
 
 // page to pass
-var Note = require('./pages/Quote.vue')
-    // imorting cpmonents
+
+// imorting cpmonents
 var QuoteGrid = require('./components/quote/QuoteGrid.vue')
 var Header = require('./components/quote/Header.vue')
 var Quote = require('./components/quote/Quote.vue')
@@ -44,29 +48,11 @@ Vue.component('app-quote', Quote);
 Vue.component('app-new-quote', New);
 Vue.component('app-header', Header);
 
+var Home = require('./pages/Home.vue')
+var Projects = require('./pages/Projects.vue')
+var Note = require('./pages/Quote.vue')
 
-$(document).ready(function() {
-    if ($('body').hasClass('home')) {
-        new Vue({
-            el: '#home',
-            render: function(createElement) {
-                return createElement(Home)
-            }
-        })
-    } else if ($('body').hasClass('note')) {
-        new Vue({
-            el: '#note',
-            render: function(createElement) {
-                return createElement(Note)
-            }
-        })
-    } else if ($('body').hasClass('projects')) {
-        new Vue({
-            el: '#projects',
-            render: function(createElement) {
-                return createElement(Projects)
-            }
-        })
-    }
+new Vue({
+    el: '#app',
 
-});
+})

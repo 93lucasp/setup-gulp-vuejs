@@ -37,5 +37,8 @@
         "bootstrap": "dist/js/bootstrap.min.js",
         "wowjs": "dist/wow.min.js",
         "owl.carousel": "dist/owl.carousel.min.js"
+    },
+    "browser": {
+        "vue": "vue/dist/vue.common.js"
     }
 }
