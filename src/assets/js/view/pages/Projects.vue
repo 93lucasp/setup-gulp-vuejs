@@ -1,4 +1,5 @@
 <template>
+    <div class="position-relative">
      <div class="component">
        <vue-navbar :userName="name" :items="items.navBar" :logo="logos.main"></vue-navbar>
        
@@ -9,33 +10,27 @@
                </div>
             </div>
         </div>
-        <vue-footer></vue-footer>
+       
     </div>
+         <vue-footer></vue-footer>
+    </div>
+    
 </template>
 
 <script>
-
-const data = require('../data');
-let items = data.items(); 
-let logos = data.logos(); 
-let listProjects = data.listProjects(); 
-module.exports =  {
-   data: function(){
-       return {
-           items: items,
-           logos: logos,
-           listProjects: listProjects,
-          
-           
-       }
-   },
-    methods: {
-        changeName() {
-            this.name="Alex";
-            
+    const data = require("../data");
+    let items = data.items();
+    let logos = data.logos();
+    let listProjects = data.listProjects();
+    module.exports = {
+        data: function() {
+            return {
+            items: items,
+            logos: logos,
+            listProjects: listProjects
+            };
         }
-    },
-}
+    };
 </script>
 
 <style scoped>

@@ -4,13 +4,9 @@
             <a v-bind:href="item + '.html'"> {{ item }} </a>
         </li>
     </div>
-       
 </template>
 
 <script>
-    // import UserDetail from './UserDetail.vue';
-    // import UserEdit from './UserEdit.vue';
-
     module.exports =  {
         props: {
             items: Array,
@@ -24,9 +20,6 @@
         },
         data: function() {
             return {
-                // links: ['link1','link2', 'link3', 'link4'],
-                // access: ['login','signup'],
-                
             }
         },
         methods: {
@@ -34,12 +27,7 @@
                 this.userName="Alexnavbar";
                 
             },
-            
         },
-        // components: {
-        //     appUserDetail: UserDetail,
-        //     appUserEdit: UserEdit
-        // }
     }
 </script>
 

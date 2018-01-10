@@ -42,7 +42,7 @@ module.exports = {
     },
     items: function() {
         return {
-            navBar: ['link1', 'link2', 'link3', 'link4'],
+            navBar: ['projects', 'quote', 'link1', 'link2'],
             footer: ['link5', 'link6', 'link7', 'link8'],
         }
     },
