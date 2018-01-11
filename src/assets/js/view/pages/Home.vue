@@ -1,16 +1,12 @@
 <template>
      <div class="component">
-
-       
-
         <div class="container">
             <button class="btn btn-primary" @click="selectedComponent = 'appBlue'">Load Blue Template</button>
             <button class="btn btn-success" @click="selectedComponent = 'appGreen'">Load Green Template</button>
             <button class="btn btn-danger" @click="selectedComponent = 'appRed'">Load Red Template</button>
             <hr>
-            <component :is="selectedComponent">ciao</component>
+            <component :is="selectedComponent"></component>
         </div>
-        
     </div>
 </template>
 
@@ -23,7 +19,6 @@
   module.exports = {
     data: function() {
       return {
-
         selectedComponent: "appBlue"
       };
     },

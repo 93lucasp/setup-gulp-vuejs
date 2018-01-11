@@ -6,6 +6,7 @@
             <div class="row">
                 <div class="col-lg-4" v-for="project in listProjects">
                     <vue-project :projects="project"></vue-project>
+                    {{items1}}
                </div>
             </div>
         </div>
@@ -22,7 +23,7 @@
     module.exports = {
         data: function() {
             return {
-            listProjects: listProjects
+                listProjects: listProjects
             };
         }
     };

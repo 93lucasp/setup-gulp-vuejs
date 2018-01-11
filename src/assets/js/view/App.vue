@@ -1,6 +1,6 @@
 <template>
     <div>
-        <vue-navbar :items="items.navBar" :logo="logos.main" ></vue-navbar>
+        <vue-navbar :items="items"></vue-navbar>
         <div class="container">
             <component :is="selectedComponent" ></component>
         </div>
@@ -9,31 +9,43 @@
 </template>
 
 <script>
-const data = require("./data");
-  let items = data.items();
-  let logos = data.logos();
-
-  const Home = require("./pages/Home.vue");
-  const Projects = require("./pages/Projects.vue");
-  const Quote = require("./pages/Quote.vue");
-  module.exports = {
-      props:['selectedComponent'],
-    data: function() {
-      return {
-        items: items,
-        logos: logos,
-      };
-    },
+    const firebase = require('firebase');
     
-    components: {
-      home: Home,
-      projects: Projects,
-      note: Quote
-    },
-    methods: {
-          
+    const data = require("./data");
+    const logos = data.logos();
+
+    const Home = require("./pages/Home.vue");
+    const Projects = require("./pages/Projects.vue");
+    const Quote = require("./pages/Quote.vue");
+
+
+    var aItems = [];
+    
+    var promise = firebase.database().ref('sections').once('value').then(function(snapshot) {
+        var oItems = snapshot.val();
+        for (key in oItems) {
+            aItems.push(oItems[key]);
+            aItems['_id'] = key;
         }
-  };
+        console.log(aItems);
+    });
+    module.exports = {
+            
+            props:['selectedComponent'],
+            data: function() {
+                return {
+                    items: aItems,
+                    logos: logos
+
+                };
+            },
+            components: {
+                home: Home,
+                projects: Projects,
+                note: Quote
+            },
+        };
+   
 </script>
 
 <style scoped>

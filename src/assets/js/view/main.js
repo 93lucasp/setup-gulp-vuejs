@@ -1,8 +1,23 @@
 var Vue = require('vue')
+var Firebase = require('firebase');
+// DEFAULT COMPONENTS
+var _config = {
 
+    apiKey: "AIzaSyBmGWaBB-M3Gh3u5McXH_4V-MVWgvAxfHk",
+    authDomain: "starteed-blog-admin.firebaseapp.com",
+    databaseURL: "https://starteed-blog-admin.firebaseio.com",
+    projectId: "starteed-blog-admin",
+    storageBucket: "starteed-blog-admin.appspot.com",
+    messagingSenderId: "545788930297",
+
+    language: "it",
+
+}
+
+const firebase = Firebase.initializeApp(_config);
 // DEFAULT COMPONENTS
 
-// imorting cpmonents
+// imorting files
 var Items = require('./components/shared/items.vue')
 var NavBar = require('./components/layout/navbar.vue')
 var Footer = require('./components/layout/footer.vue')
@@ -10,34 +25,18 @@ var Footer = require('./components/layout/footer.vue')
 Vue.component('vue-footer', Footer);
 Vue.component('vue-navbar', NavBar);
 Vue.component('vue-items', Items);
-Vue.component('vue-navbar', NavBar);
 
+// PROJECTS COMPONENTS
 
-// HOME PAGE
-
-// page to pass
-
-
-
-// page to pass
-var App = require('./App.vue')
-
-Vue.component('vue-app', App);
-// PROJECTS PAGE
-
-// page to pass
-
-// imorting components
+// imorting files
 var Project = require('./components/projects/project.vue')
     // create components
 Vue.component('vue-project', Project);
 
 
-// QUOTE PAGE
+// QUOTE COMPONENTS
 
-// page to pass
-
-// imorting cpmonents
+// imorting files
 var QuoteGrid = require('./components/quote/QuoteGrid.vue')
 var Header = require('./components/quote/Header.vue')
 var Quote = require('./components/quote/Quote.vue')
@@ -48,11 +47,10 @@ Vue.component('app-quote', Quote);
 Vue.component('app-new-quote', New);
 Vue.component('app-header', Header);
 
-var Home = require('./pages/Home.vue')
-var Projects = require('./pages/Projects.vue')
-var Note = require('./pages/Quote.vue')
 
+var App = require('./App.vue')
+
+Vue.component('vue-app', App);
 new Vue({
     el: '#app',
-
 })
