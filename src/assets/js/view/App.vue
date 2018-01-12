@@ -19,9 +19,8 @@
     const Quote = require("./pages/Quote.vue");
 
 
-    var aItems = [];
-    
-    var promise = firebase.database().ref('sections').once('value').then(function(snapshot) {
+    let aItems = [];
+    firebase.database().ref('sections').once('value').then(function(snapshot) {
         var oItems = snapshot.val();
         for (key in oItems) {
             aItems.push(oItems[key]);
@@ -29,14 +28,13 @@
         }
         console.log(aItems);
     });
-    module.exports = {
-            
+
+    module.exports = { 
             props:['selectedComponent'],
             data: function() {
                 return {
                     items: aItems,
-                    logos: logos
-
+                    // logos: logos
                 };
             },
             components: {
